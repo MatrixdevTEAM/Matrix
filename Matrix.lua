@@ -4799,7 +4799,7 @@ if SudoBot(msg) then
 if text ==('رفع زينب عام') and ChCheck(msg) then
 function raf_reply(extra, result, success)
 DevAbs:sadd(Matrix..'Abs:ManagerAll:',result.sender_user_id_)
-ReplyStatus(msg,result.sender_user_id_,"Reply","⌁︙تم رفعه في قائمة المدراء العامين")  
+ReplyStatus(msg,result.sender_user_id_,"Reply","⌁︙تم رفعه في الزنوبين العامين")  
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),raf_reply)
@@ -4809,7 +4809,7 @@ local username = text:match('^رفع زينب عام @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 DevAbs:sadd(Matrix..'Abs:ManagerAll:',result.id_)
-ReplyStatus(msg,result.id_,"Reply","⌁︙تم رفعه في قائمة المدراء العامين")  
+ReplyStatus(msg,result.id_,"Reply","⌁︙تم رفعه في الزنوبين العامين")  
 else 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙*المعرف غير صحيح*', 1, 'md')
 end end 
@@ -4818,14 +4818,14 @@ end
 if text and text:match('^رفع زينب عام (%d+)') and ChCheck(msg) then
 local user = text:match('رفع زينب عام (%d+)')
 DevAbs:sadd(Matrix..'Abs:ManagerAll:',user)
-ReplyStatus(msg,user,"Reply","⌁︙تم رفعه في قائمة المدراء العامين")  
+ReplyStatus(msg,user,"Reply","⌁︙تم رفعه في الزنوبين العامين")  
 end
 --     Source Matrix     --
 --      Rem ManagerAll    --
 if text ==('تنزيل مدير عام') and ChCheck(msg) then
 function prom_reply(extra, result, success)
 DevAbs:srem(Matrix..'Abs:ManagerAll:',result.sender_user_id_)
-ReplyStatus(msg,result.sender_user_id_,"Reply","⌁︙تم تنزيله من قائمة المدراء العامين")  
+ReplyStatus(msg,result.sender_user_id_,"Reply","⌁︙تم تنزيله من الزنوبين العامين")  
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
@@ -4835,7 +4835,7 @@ local username = text:match('^تنزيل مدير عام @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 DevAbs:srem(Matrix..'Abs:ManagerAll:',result.id_)
-ReplyStatus(msg,result.id_,"Reply","⌁︙تم تنزيله من قائمة المدراء العامين")  
+ReplyStatus(msg,result.id_,"Reply","⌁︙تم تنزيله من الزنوبين العامين")  
 else 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙*المعرف غير صحيح*', 1, 'md')
 end end 
@@ -4844,7 +4844,7 @@ end
 if text and text:match('^تنزيل مدير عام (%d+)') and ChCheck(msg) then
 local user = text:match('تنزيل مدير عام (%d+)')
 DevAbs:srem(Matrix..'Abs:ManagerAll:',user)
-ReplyStatus(msg,user,"Reply","⌁︙تم تنزيله من قائمة المدراء العامين")  
+ReplyStatus(msg,user,"Reply","⌁︙تم تنزيله من الزنوبين العامين")  
 end end
 --     Source Matrix     --
 --      Set adminall      --
@@ -5150,7 +5150,7 @@ if Constructor(msg) then
 if text ==('رفع زينب') and ChCheck(msg) then
 function prom_reply(extra, result, success)
 DevAbs:sadd(Matrix..'Abs:Managers:'..msg.chat_id_,result.sender_user_id_)
-ReplyStatus(msg,result.sender_user_id_,"Reply","⌁︙تم رفعه في قائمة المدراء")  
+ReplyStatus(msg,result.sender_user_id_,"Reply","⌁︙تم رفعه في الزنوبين")  
 end  
 if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
@@ -5160,7 +5160,7 @@ local username = text:match('^رفع زينب @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 DevAbs:sadd(Matrix..'Abs:Managers:'..msg.chat_id_,result.id_)
-ReplyStatus(msg,result.id_,"Reply","⌁︙تم رفعه في قائمة المدراء")  
+ReplyStatus(msg,result.id_,"Reply","⌁︙تم رفعه في الزنوبين")  
 else 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙*المعرف غير صحيح*', 1, 'md')
 end end 
@@ -5169,14 +5169,14 @@ end
 if text and text:match('^رفع زينب (%d+)') and ChCheck(msg) then
 local user = text:match('رفع زينب (%d+)')
 DevAbs:sadd(Matrix..'Abs:Managers:'..msg.chat_id_,user)
-ReplyStatus(msg,user,"Reply","⌁︙تم رفعه في قائمة المدراء")  
+ReplyStatus(msg,user,"Reply","⌁︙تم رفعه في الزنوبين")  
 end
 --     Source Matrix     --
 --       Rem Manager      --
 if text ==('تنزيل مدير') and ChCheck(msg) then
 function prom_reply(extra, result, success)
 DevAbs:srem(Matrix..'Abs:Managers:'..msg.chat_id_,result.sender_user_id_)
-ReplyStatus(msg,result.sender_user_id_,"Reply","⌁︙تم تنزيله من قائمة المدراء")  
+ReplyStatus(msg,result.sender_user_id_,"Reply","⌁︙تم تنزيله من الزنوبين")  
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
@@ -5186,7 +5186,7 @@ local username = text:match('^تنزيل مدير @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 DevAbs:srem(Matrix..'Abs:Managers:'..msg.chat_id_,result.id_)
-ReplyStatus(msg,result.id_,"Reply","⌁︙تم تنزيله من قائمة المدراء")  
+ReplyStatus(msg,result.id_,"Reply","⌁︙تم تنزيله من الزنوبين")  
 else 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙*المعرف غير صحيح*', 1, 'md')
 end end 
@@ -5195,7 +5195,7 @@ end
 if text and text:match('^تنزيل مدير (%d+)') and ChCheck(msg) then
 local user = text:match('تنزيل مدير (%d+)')
 DevAbs:srem(Matrix..'Abs:Managers:'..msg.chat_id_,user)
-ReplyStatus(msg,user,"Reply","⌁︙تم تنزيله من قائمة المدراء")  
+ReplyStatus(msg,user,"Reply","⌁︙تم تنزيله من الزنوبين")  
 end 
 --     Source Matrix     --
 --       Set Cleaner      --
@@ -6281,7 +6281,7 @@ end end
 if Constructor(msg) then
 if text == "المدراء" and ChCheck(msg) or text == "مدراء" and ChCheck(msg) then 
 local List = DevAbs:smembers(Matrix..'Abs:Managers:'..msg.chat_id_)
-text = "⌁︙قائمة المدراء ↫ ⤈ \n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n"
+text = "⌁︙الزنوبين ↫ ⤈ \n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n"
 for k,v in pairs(List) do
 local username = DevAbs:get(Matrix..'Save:UserName'..v)
 if username then
@@ -6526,7 +6526,7 @@ end
 --     Source Matrix     --
 if text == "المدراء العامين" and ChCheck(msg) then 
 local List = DevAbs:smembers(Matrix..'Abs:ManagerAll:')
-text = "⌁︙قائمة المدراء العامين ↫ ⤈ \n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n"
+text = "⌁︙الزنوبين العامين ↫ ⤈ \n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n"
 for k,v in pairs(List) do
 local username = DevAbs:get(Matrix..'Save:UserName'..v)
 if username then
