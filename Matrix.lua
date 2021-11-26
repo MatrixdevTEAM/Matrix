@@ -868,7 +868,7 @@ DevAbs:del(Matrix..'nodel'..data.sender_user_id_, 'delno')
 if DevAbs:sismember(Matrix..'Abs:Constructor:'..data.chat_id_, data.sender_user_id_) then
 constructor = 'المنشئين • ' else constructor = '' end 
 if DevAbs:sismember(Matrix..'Abs:Managers:'..data.chat_id_, data.sender_user_id_) then
-Managers = 'الزنوبين • ' else Managers = '' end
+Managers = 'المدراء • ' else Managers = '' end
 if DevAbs:sismember(Matrix..'Abs:Admins:'..data.chat_id_, data.sender_user_id_) then
 admins = 'الادمنيه • ' else admins = '' end
 if DevAbs:sismember(Matrix..'Abs:VipMem:'..data.chat_id_, data.sender_user_id_) then
@@ -1016,7 +1016,7 @@ local Text = [[
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
 ⌁︙م1 ↫ اوامر الحمايه
 ⌁︙م2 ↫ اوامر الادمنيه
-⌁︙م3 ↫ اوامر الزنوبين
+⌁︙م3 ↫ اوامر المدراء
 ⌁︙م4 ↫ اوامر المنشئين
 ⌁︙م5 ↫ اوامر المطورين
 ⌁︙م6 ↫ اوامر الاعضاء
@@ -1024,7 +1024,7 @@ local Text = [[
 ⌁︙[Source Channel](https://t.me/LL_WP)
 ]] 
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_},{text="اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_},{text="اوامر الزنوبين",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_},{text="اوامر المطورين",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}}}
+keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_},{text="اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_},{text="اوامر المدراء",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_},{text="اوامر المطورين",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Help or Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 else
 return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("⌁ عذرا الامر ليس لك .")..'&show_alert=true')
@@ -1087,7 +1087,7 @@ local Text = [[
 ⌁︙[Source Channel](https://t.me/LL_WP)
 ]]
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_},{text="اوامر الزنوبين",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_},{text="اوامر المطورين",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
+keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_},{text="اوامر المدراء",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_},{text="اوامر المطورين",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Help or Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 else
 return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("⌁ عذرا الامر ليس لك .")..'&show_alert=true')
@@ -1157,7 +1157,7 @@ local Text = [[
 ⌁︙[Source Channel](https://t.me/LL_WP)
 ]]
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_},{text="اوامر الزنوبين",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_},{text="اوامر المطورين",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
+keyboard.inline_keyboard = {{{text="اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_},{text="اوامر المدراء",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_},{text="اوامر المطورين",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Help or Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 else
 return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("⌁ عذرا الامر ليس لك .")..'&show_alert=true')
@@ -1171,7 +1171,7 @@ return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackq
 end
 local Help = DevAbs:get(Matrix..'Abs:Help3')
 local Text = [[
-⌁︙اوامر الزنوبين ↫ ⤈
+⌁︙اوامر المدراء ↫ ⤈
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
 ⌁︙فحص البوت
 ⌁︙ضع اسم + الاسم
@@ -1244,7 +1244,7 @@ local Text = [[
 ⌁︙رفع منظف • تنزيل منظف
 ⌁︙المنظفين • حذف المنظفين
 ⌁︙رفع زينب • تنزيل مدير
-⌁︙الزنوبين • حذف الزنوبين
+⌁︙المدراء • حذف المدراء
 ⌁︙تفعيل • تعطيل + الامر ↫ ⤈
 ⌁︙نزلني • امسح
 ⌁︙الحظر • الكتم
@@ -1269,7 +1269,7 @@ local Text = [[
 ⌁︙[Source Channel](https://t.me/LL_WP)
 ]]
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_},{text="اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="اوامر الزنوبين",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_},{text="اوامر المطورين",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
+keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_},{text="اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="اوامر المدراء",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_},{text="اوامر المطورين",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Help or Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 else
 return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("⌁ عذرا الامر ليس لك .")..'&show_alert=true')
@@ -1297,7 +1297,7 @@ local Text = [[
 ⌁︙المالكين • حذف المالكين
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
 ⌁︙رفع • تنزيل ↫ مدير عام
-⌁︙حذف • الزنوبين العامين 
+⌁︙حذف • المدراء العامين 
 ⌁︙رفع • تنزيل ↫ ادمن عام
 ⌁︙حذف • الادمنيه العامين 
 ⌁︙رفع • تنزيل ↫ مميز عام
@@ -1349,7 +1349,7 @@ local Text = [[
 ⌁︙[Source Channel](https://t.me/LL_WP)
 ]]
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_},{text="اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_},{text="اوامر الزنوبين",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
+keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_},{text="اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_},{text="اوامر المدراء",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Help or Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 else
 return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("⌁ عذرا الامر ليس لك .")..'&show_alert=true')
@@ -1391,7 +1391,7 @@ local Text = [[
 ⌁︙[Source Channel](https://t.me/LL_WP)
 ]]
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_},{text="اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_},{text="اوامر الزنوبين",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="اوامر المطورين",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
+keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..data.sender_user_id_},{text="اوامر الحمايه",callback_data="/HelpList1:"..data.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..data.sender_user_id_},{text="اوامر المدراء",callback_data="/HelpList3:"..data.sender_user_id_}},{{text="اوامر المطورين",callback_data="/HelpList5:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}},{{text="• رجوع •",callback_data="/HelpList:"..data.sender_user_id_}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Help or Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 else
 return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("⌁ عذرا الامر ليس لك .")..'&show_alert=true')
@@ -4510,7 +4510,7 @@ secondsudo = 'المطورين الثانويين • ' else secondsudo = '' end
 if DevAbs:sismember(Matrix..'Abs:SudoBot:',result.sender_user_id_) then
 sudobot = 'المطورين • ' else sudobot = '' end
 if DevAbs:sismember(Matrix..'Abs:ManagerAll:',result.sender_user_id_) then
-managerall = 'الزنوبين العامين • ' else managerall = '' end
+managerall = 'المدراء العامين • ' else managerall = '' end
 if DevAbs:sismember(Matrix..'Abs:AdminAll:',result.sender_user_id_) then
 adminall = 'الادمنيه العامين • ' else adminall = '' end
 if DevAbs:sismember(Matrix..'Abs:VipAll:',result.sender_user_id_) then
@@ -4520,7 +4520,7 @@ basicconstructor = 'المنشئين الاساسيين • ' else basicconstruc
 if DevAbs:sismember(Matrix..'Abs:Constructor:'..msg.chat_id_, result.sender_user_id_) then
 constructor = 'المنشئين • ' else constructor = '' end 
 if DevAbs:sismember(Matrix..'Abs:Managers:'..msg.chat_id_, result.sender_user_id_) then
-manager = 'الزنوبين • ' else manager = '' end
+manager = 'المدراء • ' else manager = '' end
 if DevAbs:sismember(Matrix..'Abs:Admins:'..msg.chat_id_, result.sender_user_id_) then
 admins = 'الادمنيه • ' else admins = '' end
 if DevAbs:sismember(Matrix..'Abs:VipMem:'..msg.chat_id_, result.sender_user_id_) then
@@ -4604,7 +4604,7 @@ secondsudo = 'المطورين الثانويين • ' else secondsudo = '' end
 if DevAbs:sismember(Matrix..'Abs:SudoBot:',result.id_) then
 sudobot = 'المطورين • ' else sudobot = '' end
 if DevAbs:sismember(Matrix..'Abs:ManagerAll:',result.id_) then
-managerall = 'الزنوبين العامين • ' else managerall = '' end
+managerall = 'المدراء العامين • ' else managerall = '' end
 if DevAbs:sismember(Matrix..'Abs:AdminAll:',result.id_) then
 adminall = 'الادمنيه العامين • ' else adminall = '' end
 if DevAbs:sismember(Matrix..'Abs:VipAll:',result.id_) then
@@ -4614,7 +4614,7 @@ basicconstructor = 'المنشئين الاساسيين • ' else basicconstruc
 if DevAbs:sismember(Matrix..'Abs:Constructor:'..msg.chat_id_, result.id_) then
 constructor = 'المنشئين • ' else constructor = '' end 
 if DevAbs:sismember(Matrix..'Abs:Managers:'..msg.chat_id_, result.id_) then
-manager = 'الزنوبين • ' else manager = '' end
+manager = 'المدراء • ' else manager = '' end
 if DevAbs:sismember(Matrix..'Abs:Admins:'..msg.chat_id_, result.id_) then
 admins = 'الادمنيه • ' else admins = '' end
 if DevAbs:sismember(Matrix..'Abs:VipMem:'..msg.chat_id_, result.id_) then
@@ -4799,7 +4799,7 @@ if SudoBot(msg) then
 if text ==('رفع زينب عام') and ChCheck(msg) then
 function raf_reply(extra, result, success)
 DevAbs:sadd(Matrix..'Abs:ManagerAll:',result.sender_user_id_)
-ReplyStatus(msg,result.sender_user_id_,"Reply","⌁︙تم رفعه في قائمة الزنوبين العامين")  
+ReplyStatus(msg,result.sender_user_id_,"Reply","⌁︙تم رفعه في قائمة زنوبين العامين")  
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),raf_reply)
@@ -4809,7 +4809,7 @@ local username = text:match('^رفع زينب عام @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 DevAbs:sadd(Matrix..'Abs:ManagerAll:',result.id_)
-ReplyStatus(msg,result.id_,"Reply","⌁︙تم رفعه في قائمة الزنوبين العامين")  
+ReplyStatus(msg,result.id_,"Reply","⌁︙تم رفعه في قائمة زنوبين العامين")  
 else 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙*المعرف غير صحيح*', 1, 'md')
 end end 
@@ -4818,14 +4818,14 @@ end
 if text and text:match('^رفع زينب عام (%d+)') and ChCheck(msg) then
 local user = text:match('رفع زينب عام (%d+)')
 DevAbs:sadd(Matrix..'Abs:ManagerAll:',user)
-ReplyStatus(msg,user,"Reply","⌁︙تم رفعه في قائمة الزنوبين العامين")  
+ReplyStatus(msg,user,"Reply","⌁︙تم رفعه في قائمة زنوبين العامين")  
 end
 --     Source Matrix     --
 --      Rem ManagerAll    --
 if text ==('تنزيل مدير عام') and ChCheck(msg) then
 function prom_reply(extra, result, success)
 DevAbs:srem(Matrix..'Abs:ManagerAll:',result.sender_user_id_)
-ReplyStatus(msg,result.sender_user_id_,"Reply","⌁︙تم تنزيله من قائمة الزنوبين العامين")  
+ReplyStatus(msg,result.sender_user_id_,"Reply","⌁︙تم تنزيله من قائمة زنوبين العامين")  
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
@@ -4835,7 +4835,7 @@ local username = text:match('^تنزيل مدير عام @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 DevAbs:srem(Matrix..'Abs:ManagerAll:',result.id_)
-ReplyStatus(msg,result.id_,"Reply","⌁︙تم تنزيله من قائمة الزنوبين العامين")  
+ReplyStatus(msg,result.id_,"Reply","⌁︙تم تنزيله من قائمة زنوبين العامين")  
 else 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙*المعرف غير صحيح*', 1, 'md')
 end end 
@@ -4844,7 +4844,7 @@ end
 if text and text:match('^تنزيل مدير عام (%d+)') and ChCheck(msg) then
 local user = text:match('تنزيل مدير عام (%d+)')
 DevAbs:srem(Matrix..'Abs:ManagerAll:',user)
-ReplyStatus(msg,user,"Reply","⌁︙تم تنزيله من قائمة الزنوبين العامين")  
+ReplyStatus(msg,user,"Reply","⌁︙تم تنزيله من قائمة زنوبين العامين")  
 end end
 --     Source Matrix     --
 --      Set adminall      --
@@ -5150,7 +5150,7 @@ if Constructor(msg) then
 if text ==('رفع زينب') and ChCheck(msg) then
 function prom_reply(extra, result, success)
 DevAbs:sadd(Matrix..'Abs:Managers:'..msg.chat_id_,result.sender_user_id_)
-ReplyStatus(msg,result.sender_user_id_,"Reply","⌁︙تم رفعه في قائمة الزنوبين")  
+ReplyStatus(msg,result.sender_user_id_,"Reply","⌁︙تم رفعه في قائمة زنوبين")  
 end  
 if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
@@ -5160,7 +5160,7 @@ local username = text:match('^رفع زينب @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 DevAbs:sadd(Matrix..'Abs:Managers:'..msg.chat_id_,result.id_)
-ReplyStatus(msg,result.id_,"Reply","⌁︙تم رفعه في قائمة الزنوبين")  
+ReplyStatus(msg,result.id_,"Reply","⌁︙تم رفعه في قائمة زنوبين")  
 else 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙*المعرف غير صحيح*', 1, 'md')
 end end 
@@ -5169,14 +5169,14 @@ end
 if text and text:match('^رفع زينب (%d+)') and ChCheck(msg) then
 local user = text:match('رفع زينب (%d+)')
 DevAbs:sadd(Matrix..'Abs:Managers:'..msg.chat_id_,user)
-ReplyStatus(msg,user,"Reply","⌁︙تم رفعه في قائمة الزنوبين")  
+ReplyStatus(msg,user,"Reply","⌁︙تم رفعه في قائمة زنوبين")  
 end
 --     Source Matrix     --
 --       Rem Manager      --
 if text ==('تنزيل مدير') and ChCheck(msg) then
 function prom_reply(extra, result, success)
 DevAbs:srem(Matrix..'Abs:Managers:'..msg.chat_id_,result.sender_user_id_)
-ReplyStatus(msg,result.sender_user_id_,"Reply","⌁︙تم تنزيله من قائمة الزنوبين")  
+ReplyStatus(msg,result.sender_user_id_,"Reply","⌁︙تم تنزيله من قائمة زنوبين")  
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
@@ -5186,7 +5186,7 @@ local username = text:match('^تنزيل مدير @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 DevAbs:srem(Matrix..'Abs:Managers:'..msg.chat_id_,result.id_)
-ReplyStatus(msg,result.id_,"Reply","⌁︙تم تنزيله من قائمة الزنوبين")  
+ReplyStatus(msg,result.id_,"Reply","⌁︙تم تنزيله من قائمة زنوبين")  
 else 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙*المعرف غير صحيح*', 1, 'md')
 end end 
@@ -5195,7 +5195,7 @@ end
 if text and text:match('^تنزيل مدير (%d+)') and ChCheck(msg) then
 local user = text:match('تنزيل مدير (%d+)')
 DevAbs:srem(Matrix..'Abs:Managers:'..msg.chat_id_,user)
-ReplyStatus(msg,user,"Reply","⌁︙تم تنزيله من قائمة الزنوبين")  
+ReplyStatus(msg,user,"Reply","⌁︙تم تنزيله من قائمة زنوبين")  
 end 
 --     Source Matrix     --
 --       Set Cleaner      --
@@ -6279,7 +6279,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end end
 --     Source Matrix     -- 
 if Constructor(msg) then
-if text == "الزنوبين" and ChCheck(msg) or text == "زنوبين" and ChCheck(msg) then 
+if text == "المدراء" and ChCheck(msg) or text == "زنوبين" and ChCheck(msg) then 
 local List = DevAbs:smembers(Matrix..'Abs:Managers:'..msg.chat_id_)
 text = "⌁︙قائمة الزنوبين ↫ ⤈ \n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n"
 for k,v in pairs(List) do
@@ -6524,9 +6524,9 @@ end
 Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end 
 --     Source Matrix     --
-if text == "الزنوبين العامين" and ChCheck(msg) then 
+if text == "المدراء العامين" and ChCheck(msg) then 
 local List = DevAbs:smembers(Matrix..'Abs:ManagerAll:')
-text = "⌁︙قائمة الزنوبين العامين ↫ ⤈ \n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n"
+text = "⌁︙قائمة زنوبين العامين ↫ ⤈ \n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n"
 for k,v in pairs(List) do
 local username = DevAbs:get(Matrix..'Save:UserName'..v)
 if username then
@@ -8330,8 +8330,8 @@ if txts[2] == 'المميزين عام' or txts[2] == 'المميزين العا
 ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌁︙تم حذف المميزين عام")  
 DevAbs:del(Matrix..'Abs:VipAll:')
 end
-if txts[2] == 'الزنوبين العامين' or txts[2] == 'الزنوبين العام' or txtss[2] == 'الزنوبين العامين' or txtss[2] == 'الزنوبين العام' then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌁︙تم حذف الزنوبين العامين")  
+if txts[2] == 'المدراء العامين' or txts[2] == 'المدراء العام' or txtss[2] == 'المدراء العامين' or txtss[2] == 'المدراء العام' then
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌁︙تم حذف المدراء العامين")  
 DevAbs:del(Matrix..'Abs:ManagerAll:')
 end
 if txts[2] == 'المالكين' or txtss[2] == 'المالكين' then
@@ -8359,8 +8359,8 @@ ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌁︙تم حذف المنشئي�
 DevAbs:del(Matrix..'Abs:Constructor:'..msg.chat_id_)
 end end
 if Constructor(msg) then
-if txts[2] == 'الزنوبين' or txtss[2] == 'الزنوبين' then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌁︙تم حذف الزنوبين")  
+if txts[2] == 'المدراء' or txtss[2] == 'المدراء' then
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌁︙تم حذف المدراء")  
 DevAbs:del(Matrix..'Abs:Managers:'..msg.chat_id_)
 end 
 if txts[2] == 'المنظفين' or txtss[2] == 'المنظفين' then
@@ -8447,7 +8447,7 @@ local vipmem = DevAbs:smembers(Matrix..'Abs:VipMem:'..msg.chat_id_)
 local donky = DevAbs:smembers(Matrix..'User:Donky:'..msg.chat_id_)
 if #basicconstructor ~= 0 then basicconstructort = 'المنشئين الاساسيين • ' else basicconstructort = '' end
 if #constructor ~= 0 then constructort = 'المنشئين • ' else constructort = '' end
-if #Managers ~= 0 then Managerst = 'الزنوبين • ' else Managerst = '' end
+if #Managers ~= 0 then Managerst = 'المدراء • ' else Managerst = '' end
 if #admins ~= 0 then adminst = 'الادمنيه • ' else adminst = '' end
 if #vipmem ~= 0 then vipmemt = 'المميزين • ' else vipmemt = '' end
 if #donky ~= 0 then donkyt = 'المطايه • ' else donkyt = '' end
@@ -9131,7 +9131,7 @@ ConstructorAbs = "["..Abs.first_name_.."](T.me/"..(Abs.username_ or "LL_WP")..")
 else 
 ConstructorAbs = "حساب محذوف"
 end
-Dev_Abs(msg.chat_id_, msg.id_, 1, "⌁︙المجموعه ↫ ["..dp.title_.."]("..LinkGroup..")\n⌁︙الايدي ↫ ( `"..ChatId.."` )\n⌁︙المنشئ ↫ "..ConstructorAbs.."\n⌁︙عدد الزنوبين ↫ ( *"..ManagerList.."* )\n⌁︙عدد المنشئين ↫ ( *"..ConstructorList.."* )\n⌁︙عدد الادمنيه ↫ ( *"..AdminsList.."* )\n⌁︙عدد المميزين ↫ ( *"..VipList.."* )\n⌁︙عدد المحظورين ↫ ( *"..BanedList.."* )\n⌁︙عدد المقيدين ↫ ( *"..TkeedList.."* )\n⌁︙عدد المكتومين ↫ ( *"..MutedList.."* )", 1,"md")
+Dev_Abs(msg.chat_id_, msg.id_, 1, "⌁︙المجموعه ↫ ["..dp.title_.."]("..LinkGroup..")\n⌁︙الايدي ↫ ( `"..ChatId.."` )\n⌁︙المنشئ ↫ "..ConstructorAbs.."\n⌁︙عدد المدراء ↫ ( *"..ManagerList.."* )\n⌁︙عدد المنشئين ↫ ( *"..ConstructorList.."* )\n⌁︙عدد الادمنيه ↫ ( *"..AdminsList.."* )\n⌁︙عدد المميزين ↫ ( *"..VipList.."* )\n⌁︙عدد المحظورين ↫ ( *"..BanedList.."* )\n⌁︙عدد المقيدين ↫ ( *"..TkeedList.."* )\n⌁︙عدد المكتومين ↫ ( *"..MutedList.."* )", 1,"md")
 end,nil)
 end
 end
@@ -9952,7 +9952,7 @@ local Text = [[
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
 ⌁︙م1 ↫ اوامر الحمايه
 ⌁︙م2 ↫ اوامر الادمنيه
-⌁︙م3 ↫ اوامر الزنوبين
+⌁︙م3 ↫ اوامر المدراء
 ⌁︙م4 ↫ اوامر المنشئين
 ⌁︙م5 ↫ اوامر المطورين
 ⌁︙م6 ↫ اوامر الاعضاء
@@ -9960,7 +9960,7 @@ local Text = [[
 ⌁︙[Source Channel](https://t.me/LL_WP)
 ]] 
 keyboard = {} 
-keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..msg.sender_user_id_},{text="اوامر الحمايه",callback_data="/HelpList1:"..msg.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..msg.sender_user_id_},{text="اوامر الزنوبين",callback_data="/HelpList3:"..msg.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..msg.sender_user_id_},{text="اوامر المطورين",callback_data="/HelpList5:"..msg.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
+keyboard.inline_keyboard = {{{text="اوامر الادمنيه",callback_data="/HelpList2:"..msg.sender_user_id_},{text="اوامر الحمايه",callback_data="/HelpList1:"..msg.sender_user_id_}},{{text="اوامر المنشئين",callback_data="/HelpList4:"..msg.sender_user_id_},{text="اوامر المدراء",callback_data="/HelpList3:"..msg.sender_user_id_}},{{text="اوامر الاعضاء",callback_data="/HelpList6:"..msg.sender_user_id_},{text="اوامر المطورين",callback_data="/HelpList5:"..msg.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
 Msg_id = msg.id_/2097152/0.5
 return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(Help or Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
@@ -10128,7 +10128,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙هذا الامر يخص الرتب ا�
 else
 local Help = DevAbs:get(Matrix..'Abs:Help3')
 local Text = [[
-⌁︙اوامر الزنوبين ↫ ⤈
+⌁︙اوامر المدراء ↫ ⤈
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
 ⌁︙فحص البوت
 ⌁︙ضع اسم + الاسم
@@ -10207,7 +10207,7 @@ local Text = [[
 ⌁︙رفع منظف • تنزيل منظف
 ⌁︙المنظفين • حذف المنظفين
 ⌁︙رفع زينب • تنزيل مدير
-⌁︙الزنوبين • حذف الزنوبين
+⌁︙المدراء • حذف المدراء
 ⌁︙تفعيل • تعطيل + الامر ↫ ⤈
 ⌁︙نزلني • امسح
 ⌁︙الحظر • الكتم
@@ -10266,7 +10266,7 @@ local Text = [[
 ⌁︙المالكين • حذف المالكين
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
 ⌁︙رفع • تنزيل ↫ مدير عام
-⌁︙حذف • الزنوبين العامين 
+⌁︙حذف • المدراء العامين 
 ⌁︙رفع • تنزيل ↫ ادمن عام
 ⌁︙حذف • الادمنيه العامين 
 ⌁︙رفع • تنزيل ↫ مميز عام
