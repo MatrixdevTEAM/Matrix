@@ -6279,7 +6279,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end end
 --     Source Matrix     -- 
 if Constructor(msg) then
-if text == "الزنوبين" and ChCheck(msg) or text == "مدراء" and ChCheck(msg) then 
+if text == "حكزنوبه" and ChCheck(msg) or text == "حكزنوب" and ChCheck(msg) then 
 local List = DevAbs:smembers(Matrix..'Abs:Managers:'..msg.chat_id_)
 text = "⌁︙قائمة الزنوبين ↫ ⤈ \n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n"
 for k,v in pairs(List) do
