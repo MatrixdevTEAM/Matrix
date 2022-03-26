@@ -428,7 +428,7 @@ end
 if v.Managers then
 for k,IdManagers in pairs(v.Managers) do
 DevAbs:sadd(Matrix..'Abs:Managers:'..IdGps,IdManagers)  
-print('تم رفع ( '..k..' ) زنوبين')
+print('تم رفع ( '..k..' ) مدراء')
 end
 end
 if v.Admins then
@@ -587,8 +587,8 @@ vardump(data)
 end ,nil) 
 end
 --     Source Matrix     --
-local AbsRank = function(msg) if SudoId(msg.sender_user_id_) then MatrixdevTEAM  = "المطور" elseif SecondSudo(msg) then MatrixdevTEAM = "المطور" elseif SudoBot(msg) then MatrixdevTEAM = "المطور" elseif ManagerAll(msg) then MatrixdevTEAM = "زنوب " elseif AdminAll(msg) then MatrixdevTEAM = "الادمن" elseif AbsConstructor(msg) then MatrixdevTEAM = "المالك" elseif BasicConstructor(msg) then MatrixdevTEAM = "المنشئ" elseif Constructor(msg) then MatrixdevTEAM = "المنشئ" elseif Manager(msg) then MatrixdevTEAM = "زنوب " elseif Admin(msg) then MatrixdevTEAM = "الادمن" else MatrixdevTEAM = "العضو" end return MatrixdevTEAM end
-function IdRank(user_id,chat_id) if tonumber(user_id) == tonumber(769687845) then MatrixdevTEAM = 'مبرمج السورس' elseif tonumber(user_id) == tonumber(Matrix) then MatrixdevTEAM = 'البوت' elseif SudoId(user_id) then MatrixdevTEAM = 'المطور الاساسي' elseif DevAbs:sismember(Matrix..'Abs:SecondSudo:', user_id) then MatrixdevTEAM = 'المطور الثانوي' elseif DevAbs:sismember(Matrix..'Abs:SudoBot:', user_id) then MatrixdevTEAM = DevAbs:get(Matrix.."Abs:SudoBot:Rd"..chat_id) or 'المطور' elseif DevAbs:sismember(Matrix..'Abs:ManagerAll:', user_id) then MatrixdevTEAM = DevAbs:get(Matrix.."Abs:Managers:Rd"..chat_id) or 'زنوب  العام' elseif DevAbs:sismember(Matrix..'Abs:AdminAll:', user_id) then MatrixdevTEAM = DevAbs:get(Matrix.."Abs:Admins:Rd"..chat_id) or 'الادمن العام' elseif DevAbs:sismember(Matrix..'Abs:VipAll:', user_id) then MatrixdevTEAM = DevAbs:get(Matrix.."Abs:VipMem:Rd"..chat_id) or 'المميز العام' elseif DevAbs:sismember(Matrix..'Abs:AbsConstructor:'..chat_id, user_id) then MatrixdevTEAM = 'المالك' elseif DevAbs:sismember(Matrix..'Abs:BasicConstructor:'..chat_id, user_id) then MatrixdevTEAM = DevAbs:get(Matrix.."Abs:BasicConstructor:Rd"..chat_id) or 'المنشئ الاساسي' elseif DevAbs:sismember(Matrix..'Abs:Constructor:'..chat_id, user_id) then MatrixdevTEAM = DevAbs:get(Matrix.."Abs:Constructor:Rd"..chat_id) or 'المنشئ' elseif DevAbs:sismember(Matrix..'Abs:Managers:'..chat_id, user_id) then MatrixdevTEAM = DevAbs:get(Matrix.."Abs:Managers:Rd"..chat_id) or 'زنوب ' elseif DevAbs:sismember(Matrix..'Abs:Admins:'..chat_id, user_id) then MatrixdevTEAM = DevAbs:get(Matrix.."Abs:Admins:Rd"..chat_id) or 'الادمن' elseif DevAbs:sismember(Matrix..'Abs:VipMem:'..chat_id, user_id) then  MatrixdevTEAM = DevAbs:get(Matrix.."Abs:VipMem:Rd"..chat_id) or 'المميز' elseif DevAbs:sismember(Matrix..'Abs:Cleaner:'..chat_id, user_id) then  MatrixdevTEAM = DevAbs:get(Matrix.."Abs:Cleaner:Rd"..chat_id) or 'المنظف' else MatrixdevTEAM = DevAbs:get(Matrix.."Abs:mem:Rd"..chat_id) or 'العضو' end return MatrixdevTEAM end
+local AbsRank = function(msg) if SudoId(msg.sender_user_id_) then MatrixdevTEAM  = "المطور" elseif SecondSudo(msg) then MatrixdevTEAM = "المطور" elseif SudoBot(msg) then MatrixdevTEAM = "المطور" elseif ManagerAll(msg) then MatrixdevTEAM = "المدير" elseif AdminAll(msg) then MatrixdevTEAM = "الادمن" elseif AbsConstructor(msg) then MatrixdevTEAM = "المالك" elseif BasicConstructor(msg) then MatrixdevTEAM = "المنشئ" elseif Constructor(msg) then MatrixdevTEAM = "المنشئ" elseif Manager(msg) then MatrixdevTEAM = "المدير" elseif Admin(msg) then MatrixdevTEAM = "الادمن" else MatrixdevTEAM = "العضو" end return MatrixdevTEAM end
+function IdRank(user_id,chat_id) if tonumber(user_id) == tonumber(769687845) then MatrixdevTEAM = 'مبرمج السورس' elseif tonumber(user_id) == tonumber(Matrix) then MatrixdevTEAM = 'البوت' elseif SudoId(user_id) then MatrixdevTEAM = 'المطور الاساسي' elseif DevAbs:sismember(Matrix..'Abs:SecondSudo:', user_id) then MatrixdevTEAM = 'المطور الثانوي' elseif DevAbs:sismember(Matrix..'Abs:SudoBot:', user_id) then MatrixdevTEAM = DevAbs:get(Matrix.."Abs:SudoBot:Rd"..chat_id) or 'المطور' elseif DevAbs:sismember(Matrix..'Abs:ManagerAll:', user_id) then MatrixdevTEAM = DevAbs:get(Matrix.."Abs:Managers:Rd"..chat_id) or 'المدير العام' elseif DevAbs:sismember(Matrix..'Abs:AdminAll:', user_id) then MatrixdevTEAM = DevAbs:get(Matrix.."Abs:Admins:Rd"..chat_id) or 'الادمن العام' elseif DevAbs:sismember(Matrix..'Abs:VipAll:', user_id) then MatrixdevTEAM = DevAbs:get(Matrix.."Abs:VipMem:Rd"..chat_id) or 'المميز العام' elseif DevAbs:sismember(Matrix..'Abs:AbsConstructor:'..chat_id, user_id) then MatrixdevTEAM = 'المالك' elseif DevAbs:sismember(Matrix..'Abs:BasicConstructor:'..chat_id, user_id) then MatrixdevTEAM = DevAbs:get(Matrix.."Abs:BasicConstructor:Rd"..chat_id) or 'المنشئ الاساسي' elseif DevAbs:sismember(Matrix..'Abs:Constructor:'..chat_id, user_id) then MatrixdevTEAM = DevAbs:get(Matrix.."Abs:Constructor:Rd"..chat_id) or 'المنشئ' elseif DevAbs:sismember(Matrix..'Abs:Managers:'..chat_id, user_id) then MatrixdevTEAM = DevAbs:get(Matrix.."Abs:Managers:Rd"..chat_id) or 'المدير' elseif DevAbs:sismember(Matrix..'Abs:Admins:'..chat_id, user_id) then MatrixdevTEAM = DevAbs:get(Matrix.."Abs:Admins:Rd"..chat_id) or 'الادمن' elseif DevAbs:sismember(Matrix..'Abs:VipMem:'..chat_id, user_id) then  MatrixdevTEAM = DevAbs:get(Matrix.."Abs:VipMem:Rd"..chat_id) or 'المميز' elseif DevAbs:sismember(Matrix..'Abs:Cleaner:'..chat_id, user_id) then  MatrixdevTEAM = DevAbs:get(Matrix.."Abs:Cleaner:Rd"..chat_id) or 'المنظف' else MatrixdevTEAM = DevAbs:get(Matrix.."Abs:mem:Rd"..chat_id) or 'العضو' end return MatrixdevTEAM end
 --     Source Matrix     --
 function RankChecking(user_id,chat_id)
 if SudoId(user_id) then
@@ -1176,8 +1176,8 @@ local Text = [[
 ⌁︙فحص البوت
 ⌁︙ضع اسم + الاسم
 ⌁︙اضف • حذف ↫ رد
-⌁︙ردود زنوب 
-⌁︙حذف ردود زنوب 
+⌁︙ردود المدير
+⌁︙حذف ردود المدير
 ⌁︙اضف • حذف ↫ رد متعدد
 ⌁︙حذف رد من متعدد
 ⌁︙الردود المتعدده
@@ -1198,7 +1198,7 @@ local Text = [[
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
 ⌁︙تغير رد + اسم الرتبه + النص ↫ ⤈
 ⌁︙المطور • منشئ الاساسي
-⌁︙المنشئ • زنوب  • الادمن
+⌁︙المنشئ • المدير • الادمن
 ⌁︙المميز • المنظف • العضو
 ⌁︙حذف ردود الرتب
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
@@ -1210,7 +1210,7 @@ local Text = [[
 ⌁︙اطردني • الايدي بالصوره • الابراج
 ⌁︙معاني الاسماء • اوامر النسب • انطق
 ⌁︙الايدي • تحويل الصيغ • اوامر التحشيش
-⌁︙ردود زنوب  • ردود المطور • التحقق
+⌁︙ردود المدير • ردود المطور • التحقق
 ⌁︙ضافني • حساب العمر • الزخرفه
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
 ⌁︙[Source Channel](https://t.me/LL_WP)
@@ -1243,7 +1243,7 @@ local Text = [[
 ⌁︙اضف رسائل ↫ بالرد • بالايدي
 ⌁︙رفع منظف • تنزيل منظف
 ⌁︙المنظفين • حذف المنظفين
-⌁︙رفع زينب • تنزيل مدير
+⌁︙رفع مدير • تنزيل مدير
 ⌁︙المدراء • حذف المدراء
 ⌁︙تفعيل • تعطيل + الامر ↫ ⤈
 ⌁︙نزلني • امسح
@@ -1472,7 +1472,7 @@ DevAbs:set(Matrix.."Set:Cmd:Group:New1"..msg.chat_id_..":م","رفع مميز")
 DevAbs:sadd(Matrix.."List:Cmd:Group:New"..msg.chat_id_,"م")
 DevAbs:set(Matrix.."Set:Cmd:Group:New1"..msg.chat_id_..":اد","رفع ادمن")
 DevAbs:sadd(Matrix.."List:Cmd:Group:New"..msg.chat_id_,"اد")
-DevAbs:set(Matrix.."Set:Cmd:Group:New1"..msg.chat_id_..":مد","رفع زينب")
+DevAbs:set(Matrix.."Set:Cmd:Group:New1"..msg.chat_id_..":مد","رفع مدير")
 DevAbs:sadd(Matrix.."List:Cmd:Group:New"..msg.chat_id_,"مد")
 DevAbs:set(Matrix.."Set:Cmd:Group:New1"..msg.chat_id_..":من","رفع منشئ")
 DevAbs:sadd(Matrix.."List:Cmd:Group:New"..msg.chat_id_,"من")
@@ -1482,7 +1482,7 @@ DevAbs:set(Matrix.."Set:Cmd:Group:New1"..msg.chat_id_..":تعط","تعطيل ا�
 DevAbs:sadd(Matrix.."List:Cmd:Group:New"..msg.chat_id_,"تعط")
 DevAbs:set(Matrix.."Set:Cmd:Group:New1"..msg.chat_id_..":تفع","تفعيل الايدي بالصوره")
 DevAbs:sadd(Matrix.."List:Cmd:Group:New"..msg.chat_id_,"تفع")
-send(msg.chat_id_, msg.id_,"⌁︙تم ترتيب الاوامر بالشكل التالي ↫ ⤈\n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n⌁︙ايدي ↫ ا\n⌁︙تنزيل الكل ↫ تك\n⌁︙رفع مميز ↫ م\n⌁︙رفع ادمن ↫ اد \n⌁︙رفع زينب ↫ مد \n⌁︙رفع منشئ ↫ من \n⌁︙رفع منشئ اساسي ↫ اس  \n⌁︙تفعيل الايدي بالصوره ↫ تفع\n⌁︙تعطيل الايدي بالصوره ↫ تعط\n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉")  
+send(msg.chat_id_, msg.id_,"⌁︙تم ترتيب الاوامر بالشكل التالي ↫ ⤈\n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n⌁︙ايدي ↫ ا\n⌁︙تنزيل الكل ↫ تك\n⌁︙رفع مميز ↫ م\n⌁︙رفع ادمن ↫ اد \n⌁︙رفع مدير ↫ مد \n⌁︙رفع منشئ ↫ من \n⌁︙رفع منشئ اساسي ↫ اس  \n⌁︙تفعيل الايدي بالصوره ↫ تفع\n⌁︙تعطيل الايدي بالصوره ↫ تعط\n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉")  
 end
 if text == "اضف امر" or text == "اضافة امر" or text == "اضافه امر" and ChCheck(msg) then
 DevAbs:set(Matrix.."Set:Cmd:Group"..msg.chat_id_..":"..msg.sender_user_id_,"true") 
@@ -4690,7 +4690,7 @@ end
 --     Source Matrix     --
 --     Set SecondSudo     --
 if Sudo(msg) then
-if text ==('اضف مطور ثانوي') or text ==('رفع مطور ثانوي') and ChCheck(msg) then
+if text ==('اضف مطور ثانوي') or text ==('رفع مطور حلو') and ChCheck(msg) then
 function sudo_reply(extra, result, success)
 DevAbs:sadd(Matrix..'Abs:SecondSudo:',result.sender_user_id_)
 ReplyStatus(msg,result.sender_user_id_,"Reply","⌁︙تم رفعه في قائمة المطورين الثانويين")  
@@ -4698,8 +4698,8 @@ end
 if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),sudo_reply)
 end end 
-if text and (text:match('^اضف مطور ثانوي @(.*)') or text:match('^رفع مطور ثانوي @(.*)')) and ChCheck(msg) then
-local username = text:match('^اضف مطور ثانوي @(.*)') or text:match('^رفع مطور ثانوي @(.*)')
+if text and (text:match('^اضف مطور ثانوي @(.*)') or text:match('^رفع مطور حلو @(.*)')) and ChCheck(msg) then
+local username = text:match('^اضف مطور ثانوي @(.*)') or text:match('^رفع مطور حلو @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 DevAbs:sadd(Matrix..'Abs:SecondSudo:',result.id_)
@@ -4709,8 +4709,8 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙*المعرف غير صحيح*', 1, 'md
 end end 
 resolve_username(username,promreply)
 end
-if text and (text:match('^اضف مطور ثانوي (%d+)') or text:match('^رفع مطور ثانوي (%d+)')) and ChCheck(msg) then
-local user = text:match('اضف مطور ثانوي (%d+)') or text:match('رفع مطور ثانوي (%d+)')
+if text and (text:match('^اضف مطور ثانوي (%d+)') or text:match('^رفع مطور حلو (%d+)')) and ChCheck(msg) then
+local user = text:match('اضف مطور ثانوي (%d+)') or text:match('رفع مطور حلو (%d+)')
 DevAbs:sadd(Matrix..'Abs:SecondSudo:',user)
 ReplyStatus(msg,user,"Reply","⌁︙تم رفعه في قائمة المطورين الثانويين")  
 end
@@ -4796,36 +4796,36 @@ end end
 --     Source Matrix     --
 --      Set ManagerAll    --
 if SudoBot(msg) then
-if text ==('رفع زينب عام') and ChCheck(msg) then
+if text ==('رفع مدير عام') and ChCheck(msg) then
 function raf_reply(extra, result, success)
 DevAbs:sadd(Matrix..'Abs:ManagerAll:',result.sender_user_id_)
-ReplyStatus(msg,result.sender_user_id_,"Reply","⌁︙تم رفعه في قائمة زنوبين العامين")  
+ReplyStatus(msg,result.sender_user_id_,"Reply","⌁︙تم رفعه في قائمة المدراء العامين")  
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),raf_reply)
 end end
-if text and text:match('^رفع زينب عام @(.*)') and ChCheck(msg) then
-local username = text:match('^رفع زينب عام @(.*)')
+if text and text:match('^رفع مدير عام @(.*)') and ChCheck(msg) then
+local username = text:match('^رفع مدير عام @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 DevAbs:sadd(Matrix..'Abs:ManagerAll:',result.id_)
-ReplyStatus(msg,result.id_,"Reply","⌁︙تم رفعه في قائمة زنوبين العامين")  
+ReplyStatus(msg,result.id_,"Reply","⌁︙تم رفعه في قائمة المدراء العامين")  
 else 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙*المعرف غير صحيح*', 1, 'md')
 end end 
 resolve_username(username,promreply)
 end
-if text and text:match('^رفع زينب عام (%d+)') and ChCheck(msg) then
-local user = text:match('رفع زينب عام (%d+)')
+if text and text:match('^رفع مدير عام (%d+)') and ChCheck(msg) then
+local user = text:match('رفع مدير عام (%d+)')
 DevAbs:sadd(Matrix..'Abs:ManagerAll:',user)
-ReplyStatus(msg,user,"Reply","⌁︙تم رفعه في قائمة زنوبين العامين")  
+ReplyStatus(msg,user,"Reply","⌁︙تم رفعه في قائمة المدراء العامين")  
 end
 --     Source Matrix     --
 --      Rem ManagerAll    --
 if text ==('تنزيل مدير عام') and ChCheck(msg) then
 function prom_reply(extra, result, success)
 DevAbs:srem(Matrix..'Abs:ManagerAll:',result.sender_user_id_)
-ReplyStatus(msg,result.sender_user_id_,"Reply","⌁︙تم تنزيله من قائمة زنوبين العامين")  
+ReplyStatus(msg,result.sender_user_id_,"Reply","⌁︙تم تنزيله من قائمة المدراء العامين")  
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
@@ -4835,7 +4835,7 @@ local username = text:match('^تنزيل مدير عام @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 DevAbs:srem(Matrix..'Abs:ManagerAll:',result.id_)
-ReplyStatus(msg,result.id_,"Reply","⌁︙تم تنزيله من قائمة زنوبين العامين")  
+ReplyStatus(msg,result.id_,"Reply","⌁︙تم تنزيله من قائمة المدراء العامين")  
 else 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙*المعرف غير صحيح*', 1, 'md')
 end end 
@@ -4844,7 +4844,7 @@ end
 if text and text:match('^تنزيل مدير عام (%d+)') and ChCheck(msg) then
 local user = text:match('تنزيل مدير عام (%d+)')
 DevAbs:srem(Matrix..'Abs:ManagerAll:',user)
-ReplyStatus(msg,user,"Reply","⌁︙تم تنزيله من قائمة زنوبين العامين")  
+ReplyStatus(msg,user,"Reply","⌁︙تم تنزيله من قائمة المدراء العامين")  
 end end
 --     Source Matrix     --
 --      Set adminall      --
@@ -5147,36 +5147,36 @@ end
 --     Source Matrix     --
 --      Set Manager       --
 if Constructor(msg) then
-if text ==('رفع زينب') and ChCheck(msg) then
+if text ==('رفع مدير') and ChCheck(msg) then
 function prom_reply(extra, result, success)
 DevAbs:sadd(Matrix..'Abs:Managers:'..msg.chat_id_,result.sender_user_id_)
-ReplyStatus(msg,result.sender_user_id_,"Reply","⌁︙تم رفعه في قائمة زنوبين")  
+ReplyStatus(msg,result.sender_user_id_,"Reply","⌁︙تم رفعه في قائمة المدراء")  
 end  
 if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
 end end
-if text and text:match('^رفع زينب @(.*)') and ChCheck(msg) then
-local username = text:match('^رفع زينب @(.*)')
+if text and text:match('^رفع مدير @(.*)') and ChCheck(msg) then
+local username = text:match('^رفع مدير @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 DevAbs:sadd(Matrix..'Abs:Managers:'..msg.chat_id_,result.id_)
-ReplyStatus(msg,result.id_,"Reply","⌁︙تم رفعه في قائمة زنوبين")  
+ReplyStatus(msg,result.id_,"Reply","⌁︙تم رفعه في قائمة المدراء")  
 else 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙*المعرف غير صحيح*', 1, 'md')
 end end 
 resolve_username(username,promreply)
 end 
-if text and text:match('^رفع زينب (%d+)') and ChCheck(msg) then
-local user = text:match('رفع زينب (%d+)')
+if text and text:match('^رفع مدير (%d+)') and ChCheck(msg) then
+local user = text:match('رفع مدير (%d+)')
 DevAbs:sadd(Matrix..'Abs:Managers:'..msg.chat_id_,user)
-ReplyStatus(msg,user,"Reply","⌁︙تم رفعه في قائمة زنوبين")  
+ReplyStatus(msg,user,"Reply","⌁︙تم رفعه في قائمة المدراء")  
 end
 --     Source Matrix     --
 --       Rem Manager      --
 if text ==('تنزيل مدير') and ChCheck(msg) then
 function prom_reply(extra, result, success)
 DevAbs:srem(Matrix..'Abs:Managers:'..msg.chat_id_,result.sender_user_id_)
-ReplyStatus(msg,result.sender_user_id_,"Reply","⌁︙تم تنزيله من قائمة زنوبين")  
+ReplyStatus(msg,result.sender_user_id_,"Reply","⌁︙تم تنزيله من قائمة المدراء")  
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
@@ -5186,7 +5186,7 @@ local username = text:match('^تنزيل مدير @(.*)')
 function promreply(extra,result,success)
 if result.id_ then
 DevAbs:srem(Matrix..'Abs:Managers:'..msg.chat_id_,result.id_)
-ReplyStatus(msg,result.id_,"Reply","⌁︙تم تنزيله من قائمة زنوبين")  
+ReplyStatus(msg,result.id_,"Reply","⌁︙تم تنزيله من قائمة المدراء")  
 else 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙*المعرف غير صحيح*', 1, 'md')
 end end 
@@ -5195,7 +5195,7 @@ end
 if text and text:match('^تنزيل مدير (%d+)') and ChCheck(msg) then
 local user = text:match('تنزيل مدير (%d+)')
 DevAbs:srem(Matrix..'Abs:Managers:'..msg.chat_id_,user)
-ReplyStatus(msg,user,"Reply","⌁︙تم تنزيله من قائمة زنوبين")  
+ReplyStatus(msg,user,"Reply","⌁︙تم تنزيله من قائمة المدراء")  
 end 
 --     Source Matrix     --
 --       Set Cleaner      --
@@ -6279,9 +6279,9 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end end
 --     Source Matrix     -- 
 if Constructor(msg) then
-if text == "المدراء" and ChCheck(msg) or text == "زنوبين" and ChCheck(msg) then 
+if text == "المدراء" and ChCheck(msg) or text == "مدراء" and ChCheck(msg) then 
 local List = DevAbs:smembers(Matrix..'Abs:Managers:'..msg.chat_id_)
-text = "⌁︙قائمة الزنوبين ↫ ⤈ \n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n"
+text = "⌁︙قائمة المدراء ↫ ⤈ \n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n"
 for k,v in pairs(List) do
 local username = DevAbs:get(Matrix..'Save:UserName'..v)
 if username then
@@ -6290,7 +6290,7 @@ else
 text = text..k.."~ : `"..v.."`\n"
 end end
 if #List == 0 then 
-text = "⌁︙*لا يوجد زنوبين*"
+text = "⌁︙*لا يوجد مدراء*"
 end
 Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end 
@@ -6526,7 +6526,7 @@ end
 --     Source Matrix     --
 if text == "المدراء العامين" and ChCheck(msg) then 
 local List = DevAbs:smembers(Matrix..'Abs:ManagerAll:')
-text = "⌁︙قائمة زنوبين العامين ↫ ⤈ \n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n"
+text = "⌁︙قائمة المدراء العامين ↫ ⤈ \n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n"
 for k,v in pairs(List) do
 local username = DevAbs:get(Matrix..'Save:UserName'..v)
 if username then
@@ -6535,7 +6535,7 @@ else
 text = text..k.."~ : `"..v.."`\n"
 end end
 if #List == 0 then 
-text = "⌁︙*لا يوجد زنوبين عامين*"
+text = "⌁︙*لا يوجد مدراء عامين*"
 end
 Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end
@@ -8209,10 +8209,10 @@ local Text = text:match("^تغير رد المنشئ (.*)$")
 DevAbs:set(Matrix.."Abs:Constructor:Rd"..msg.chat_id_,Text)
 Dev_Abs(msg.chat_id_, msg.id_, 1, "⌁︙تم تغير رد المنشئ الى ↫ "..Text, 1, 'md')
 end
-if text and text:match("^تغير رد زنوب  (.*)$") then
-local Text = text:match("^تغير رد زنوب  (.*)$") 
+if text and text:match("^تغير رد المدير (.*)$") then
+local Text = text:match("^تغير رد المدير (.*)$") 
 DevAbs:set(Matrix.."Abs:Managers:Rd"..msg.chat_id_,Text) 
-Dev_Abs(msg.chat_id_, msg.id_, 1, "⌁︙تم تغير رد زنوب  الى ↫ "..Text, 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, "⌁︙تم تغير رد المدير الى ↫ "..Text, 1, 'md')
 end
 if text and text:match("^تغير رد الادمن (.*)$") then
 local Text = text:match("^تغير رد الادمن (.*)$") 
@@ -8833,7 +8833,7 @@ data,res = https.request('https://apiabs.ml/Audios.php')
 if res == 200 then
 Audios = json:decode(data)
 if Audios.Info == true then
-local Text ='⌁︙مقدمه من يونس'
+local Text ='⌁︙مقدمه من المبرمج يونس'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = '⌁ Matrix TeAM .',url="t.me/LL_WP"}},
@@ -8907,13 +8907,13 @@ absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, MatrixdevTEAM, 14, string.l
 DevAbs:set(Matrix..'Abs:Lock:Robot'..msg.chat_id_,true)
 end
 --     Source Matrix     --
-if text == 'تفعيل ردود زنوب ' and Manager(msg) and ChCheck(msg) then 
-local MatrixdevTEAM = '⌁︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n⌁︙تم تفعيل ردود زنوب '
+if text == 'تفعيل ردود المدير' and Manager(msg) and ChCheck(msg) then 
+local MatrixdevTEAM = '⌁︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n⌁︙تم تفعيل ردود المدير'
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, MatrixdevTEAM, 14, string.len(msg.sender_user_id_))
 DevAbs:del(Matrix..'Abs:Lock:GpRed'..msg.chat_id_)
 end
-if text == 'تعطيل ردود زنوب ' and Manager(msg) and ChCheck(msg) then 
-local MatrixdevTEAM = '⌁︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n⌁︙تم تعطيل ردود زنوب '
+if text == 'تعطيل ردود المدير' and Manager(msg) and ChCheck(msg) then 
+local MatrixdevTEAM = '⌁︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n⌁︙تم تعطيل ردود المدير'
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, MatrixdevTEAM, 14, string.len(msg.sender_user_id_))
 DevAbs:set(Matrix..'Abs:Lock:GpRed'..msg.chat_id_,true)
 end
@@ -9808,9 +9808,9 @@ return false
 end
 end
 --     Source Matrix     --
-if text == 'الردود' and Manager(msg) and ChCheck(msg) or text == 'ردود زنوب ' and Manager(msg) and ChCheck(msg) then
+if text == 'الردود' and Manager(msg) and ChCheck(msg) or text == 'ردود المدير' and Manager(msg) and ChCheck(msg) then
 local redod = DevAbs:smembers(Matrix..'Abs:Manager:GpRed'..msg.chat_id_)
-MsgRep = '⌁︙ردود زنوب  ↫ ⤈ \n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n'
+MsgRep = '⌁︙ردود المدير ↫ ⤈ \n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n'
 for k,v in pairs(redod) do
 if DevAbs:get(Matrix.."Abs:Gif:GpRed"..v..msg.chat_id_) then
 dp = 'متحركه 🎭'
@@ -9836,7 +9836,7 @@ MsgRep = '⌁︙لا توجد ردود مضافه'
 end
 send(msg.chat_id_,msg.id_,MsgRep)
 end
-if text == 'حذف الردود' and Manager(msg) and ChCheck(msg) or text == 'مسح الردود' and Manager(msg) and ChCheck(msg) or text == 'حذف ردود زنوب ' and Manager(msg) and ChCheck(msg) or text == 'مسح ردود زنوب ' and Manager(msg) and ChCheck(msg) then
+if text == 'حذف الردود' and Manager(msg) and ChCheck(msg) or text == 'مسح الردود' and Manager(msg) and ChCheck(msg) or text == 'حذف ردود المدير' and Manager(msg) and ChCheck(msg) or text == 'مسح ردود المدير' and Manager(msg) and ChCheck(msg) then
 local redod = DevAbs:smembers(Matrix..'Abs:Manager:GpRed'..msg.chat_id_)
 if #redod == 0 then
 Dev_Abs(msg.chat_id_, msg.id_, 1, "⌁︙لا توجد ردود مضافه" ,  1, "md")
@@ -9852,7 +9852,7 @@ DevAbs:del(Matrix..'Abs:File:GpRed'..v..msg.chat_id_)
 DevAbs:del(Matrix..'Abs:Text:GpRed'..v..msg.chat_id_)
 DevAbs:del(Matrix..'Abs:Manager:GpRed'..msg.chat_id_)
 end
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌁︙تم حذف ردود زنوب ")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌁︙تم حذف ردود المدير")  
 return false
 end
 end
@@ -10133,8 +10133,8 @@ local Text = [[
 ⌁︙فحص البوت
 ⌁︙ضع اسم + الاسم
 ⌁︙اضف • حذف ↫ رد
-⌁︙ردود زنوب 
-⌁︙حذف ردود زنوب 
+⌁︙ردود المدير
+⌁︙حذف ردود المدير
 ⌁︙اضف • حذف ↫ رد متعدد
 ⌁︙حذف رد من متعدد
 ⌁︙الردود المتعدده
@@ -10155,7 +10155,7 @@ local Text = [[
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
 ⌁︙تغير رد + اسم الرتبه + النص ↫ ⤈
 ⌁︙المطور • منشئ الاساسي
-⌁︙المنشئ • زنوب  • الادمن
+⌁︙المنشئ • المدير • الادمن
 ⌁︙المميز • المنظف • العضو
 ⌁︙حذف ردود الرتب
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
@@ -10167,7 +10167,7 @@ local Text = [[
 ⌁︙اطردني • الايدي بالصوره • الابراج
 ⌁︙معاني الاسماء • اوامر النسب • انطق
 ⌁︙الايدي • تحويل الصيغ • اوامر التحشيش
-⌁︙ردود زنوب  • ردود المطور • التحقق
+⌁︙ردود المدير • ردود المطور • التحقق
 ⌁︙ضافني • حساب العمر • الزخرفه
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
 ⌁︙[Source Channel](https://t.me/LL_WP)
@@ -10206,7 +10206,7 @@ local Text = [[
 ⌁︙اضف رسائل ↫ بالرد • بالايدي
 ⌁︙رفع منظف • تنزيل منظف
 ⌁︙المنظفين • حذف المنظفين
-⌁︙رفع زينب • تنزيل مدير
+⌁︙رفع مدير • تنزيل مدير
 ⌁︙المدراء • حذف المدراء
 ⌁︙تفعيل • تعطيل + الامر ↫ ⤈
 ⌁︙نزلني • امسح
@@ -10715,4 +10715,4 @@ end
 --     This Is The Source Channel @LL_WP .    --
 --                 - Matrix -                  --
 --          -- https://t.me/LL_WP --          --
-------------------------------------------------  
+------------------------------------------------ 
