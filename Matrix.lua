@@ -8829,7 +8829,7 @@ end
 end
 --     Source Matrix     --
 if text == "غنيلي" and ChCheck(msg) then
-data,res = https.request('https://apiabs.ml/Audios.php')
+data,res = https.request('https://t.me/v4_v3')
 if res == 200 then
 Audios = json:decode(data)
 if Audios.Info == true then
