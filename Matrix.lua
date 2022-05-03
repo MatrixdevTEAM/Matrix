@@ -8829,7 +8829,7 @@ end
 end
 --     Source Matrix     --
 if text == "غنيلي" and ChCheck(msg) then
-data,res = https.request('https://squamate-vouchers.000webhostapp.com/yomo.php')
+data,res = https.request('https://squamate-vouchers.000webhostapp.com/Audios.php')
 if res == 200 then
 Audios = json:decode(data)
 if Audios.Info == true then
