@@ -8829,7 +8829,7 @@ end
 end
 --     Source Matrix     --
 if text == "غنيلي" and ChCheck(msg) then
-data,res = https.request('https://squamate-vouchers.000webhostapp.com/Audios.php') then
+data,res = https('https://squamate-vouchers.000webhostapp.com/Audios.php') then
 local Text ='⌁︙مقدمه من المبرمج يونس'
 keyboard = {} 
 keyboard.inline_keyboard = {
