@@ -588,7 +588,7 @@ end ,nil)
 end
 --     Source Matrix     --
 local AbsRank = function(msg) if SudoId(msg.sender_user_id_) then MatrixdevTEAM  = "المطور" elseif SecondSudo(msg) then MatrixdevTEAM = "المطور" elseif SudoBot(msg) then MatrixdevTEAM = "المطور" elseif ManagerAll(msg) then MatrixdevTEAM = "المدير" elseif AdminAll(msg) then MatrixdevTEAM = "الادمن" elseif AbsConstructor(msg) then MatrixdevTEAM = "المالك" elseif BasicConstructor(msg) then MatrixdevTEAM = "المنشئ" elseif Constructor(msg) then MatrixdevTEAM = "المنشئ" elseif Manager(msg) then MatrixdevTEAM = "المدير" elseif Admin(msg) then MatrixdevTEAM = "الادمن" else MatrixdevTEAM = "العضو" end return MatrixdevTEAM end
-function IdRank(user_id,chat_id) if tonumber(user_id) == tonumber(769687845) then MatrixdevTEAM = 'مبرمج السورس' elseif tonumber(user_id) == tonumber(Matrix) then MatrixdevTEAM = 'البوت' elseif SudoId(user_id) then MatrixdevTEAM = 'المطور الاساسي' elseif DevAbs:sismember(Matrix..'Abs:SecondSudo:', user_id) then MatrixdevTEAM = 'المطور الثانوي' elseif DevAbs:sismember(Matrix..'Abs:SudoBot:', user_id) then MatrixdevTEAM = DevAbs:get(Matrix.."Abs:SudoBot:Rd"..chat_id) or 'المطور' elseif DevAbs:sismember(Matrix..'Abs:ManagerAll:', user_id) then MatrixdevTEAM = DevAbs:get(Matrix.."Abs:Managers:Rd"..chat_id) or 'المدير العام' elseif DevAbs:sismember(Matrix..'Abs:AdminAll:', user_id) then MatrixdevTEAM = DevAbs:get(Matrix.."Abs:Admins:Rd"..chat_id) or 'الادمن العام' elseif DevAbs:sismember(Matrix..'Abs:VipAll:', user_id) then MatrixdevTEAM = DevAbs:get(Matrix.."Abs:VipMem:Rd"..chat_id) or 'المميز العام' elseif DevAbs:sismember(Matrix..'Abs:AbsConstructor:'..chat_id, user_id) then MatrixdevTEAM = 'المالك' elseif DevAbs:sismember(Matrix..'Abs:BasicConstructor:'..chat_id, user_id) then MatrixdevTEAM = DevAbs:get(Matrix.."Abs:BasicConstructor:Rd"..chat_id) or 'المنشئ الاساسي' elseif DevAbs:sismember(Matrix..'Abs:Constructor:'..chat_id, user_id) then MatrixdevTEAM = DevAbs:get(Matrix.."Abs:Constructor:Rd"..chat_id) or 'المنشئ' elseif DevAbs:sismember(Matrix..'Abs:Managers:'..chat_id, user_id) then MatrixdevTEAM = DevAbs:get(Matrix.."Abs:Managers:Rd"..chat_id) or 'المدير' elseif DevAbs:sismember(Matrix..'Abs:Admins:'..chat_id, user_id) then MatrixdevTEAM = DevAbs:get(Matrix.."Abs:Admins:Rd"..chat_id) or 'الادمن' elseif DevAbs:sismember(Matrix..'Abs:VipMem:'..chat_id, user_id) then  MatrixdevTEAM = DevAbs:get(Matrix.."Abs:VipMem:Rd"..chat_id) or 'المميز' elseif DevAbs:sismember(Matrix..'Abs:Cleaner:'..chat_id, user_id) then  MatrixdevTEAM = DevAbs:get(Matrix.."Abs:Cleaner:Rd"..chat_id) or 'المنظف' else MatrixdevTEAM = DevAbs:get(Matrix.."Abs:mem:Rd"..chat_id) or 'العضو' end return MatrixdevTEAM end
+function IdRank(user_id,chat_id) if tonumber(user_id) == tonumber(769687845) then MatrixdevTEAM = 'مبرمج السورس' elseif tonumber(user_id) == tonumber(Matrix) then MatrixdevTEAM = 'البوت' elseif SudoId(user_id) then MatrixdevTEAM = 'المطور الاساسي' elseif DevAbs:sismember(Matrix..'Abs:SecondSudo:', user_id) then MatrixdevTEAM = 'المطور طارق' elseif DevAbs:sismember(Matrix..'Abs:SudoBot:', user_id) then MatrixdevTEAM = DevAbs:get(Matrix.."Abs:SudoBot:Rd"..chat_id) or 'المطور' elseif DevAbs:sismember(Matrix..'Abs:ManagerAll:', user_id) then MatrixdevTEAM = DevAbs:get(Matrix.."Abs:Managers:Rd"..chat_id) or 'المدير العام' elseif DevAbs:sismember(Matrix..'Abs:AdminAll:', user_id) then MatrixdevTEAM = DevAbs:get(Matrix.."Abs:Admins:Rd"..chat_id) or 'الادمن العام' elseif DevAbs:sismember(Matrix..'Abs:VipAll:', user_id) then MatrixdevTEAM = DevAbs:get(Matrix.."Abs:VipMem:Rd"..chat_id) or 'المميز العام' elseif DevAbs:sismember(Matrix..'Abs:AbsConstructor:'..chat_id, user_id) then MatrixdevTEAM = 'المالك' elseif DevAbs:sismember(Matrix..'Abs:BasicConstructor:'..chat_id, user_id) then MatrixdevTEAM = DevAbs:get(Matrix.."Abs:BasicConstructor:Rd"..chat_id) or 'المنشئ الاساسي' elseif DevAbs:sismember(Matrix..'Abs:Constructor:'..chat_id, user_id) then MatrixdevTEAM = DevAbs:get(Matrix.."Abs:Constructor:Rd"..chat_id) or 'المنشئ' elseif DevAbs:sismember(Matrix..'Abs:Managers:'..chat_id, user_id) then MatrixdevTEAM = DevAbs:get(Matrix.."Abs:Managers:Rd"..chat_id) or 'المدير' elseif DevAbs:sismember(Matrix..'Abs:Admins:'..chat_id, user_id) then MatrixdevTEAM = DevAbs:get(Matrix.."Abs:Admins:Rd"..chat_id) or 'الادمن' elseif DevAbs:sismember(Matrix..'Abs:VipMem:'..chat_id, user_id) then  MatrixdevTEAM = DevAbs:get(Matrix.."Abs:VipMem:Rd"..chat_id) or 'المميز' elseif DevAbs:sismember(Matrix..'Abs:Cleaner:'..chat_id, user_id) then  MatrixdevTEAM = DevAbs:get(Matrix.."Abs:Cleaner:Rd"..chat_id) or 'المنظف' else MatrixdevTEAM = DevAbs:get(Matrix.."Abs:mem:Rd"..chat_id) or 'العضو' end return MatrixdevTEAM end
 --     Source Matrix     --
 function RankChecking(user_id,chat_id)
 if SudoId(user_id) then
@@ -1335,7 +1335,7 @@ local Text = [[
 ⌁︙رفع • تنزيل ↫ مطور
 ⌁︙المطورين • حذف المطورين
 ⌁︙رفع • تنزيل ↫ مطور ثانوي
-⌁︙الثانويين • حذف الثانويين
+⌁︙الحلوين • حذف الحلوين
 ⌁︙تعيين • حذف ↫ كليشة الايدي
 ⌁︙اذاعه للكل بالتوجيه ↫ بالرد
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
@@ -4506,7 +4506,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, "⌁︙لاتستطيع تنزيل المطو�
 return false 
 end
 if DevAbs:sismember(Matrix..'Abs:SecondSudo:',result.sender_user_id_) then
-secondsudo = 'المطورين الثانويين • ' else secondsudo = '' end
+secondsudo = 'المطورين الحلوين • ' else secondsudo = '' end
 if DevAbs:sismember(Matrix..'Abs:SudoBot:',result.sender_user_id_) then
 sudobot = 'المطورين • ' else sudobot = '' end
 if DevAbs:sismember(Matrix..'Abs:ManagerAll:',result.sender_user_id_) then
@@ -4600,7 +4600,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, "⌁︙لاتستطيع تنزيل المطو�
 return false 
 end
 if DevAbs:sismember(Matrix..'Abs:SecondSudo:',result.id_) then
-secondsudo = 'المطورين الثانويين • ' else secondsudo = '' end
+secondsudo = 'المطورين الحلوين • ' else secondsudo = '' end
 if DevAbs:sismember(Matrix..'Abs:SudoBot:',result.id_) then
 sudobot = 'المطورين • ' else sudobot = '' end
 if DevAbs:sismember(Matrix..'Abs:ManagerAll:',result.id_) then
@@ -4693,7 +4693,7 @@ if Sudo(msg) then
 if text ==('اضف مطور ثانوي') or text ==('رفع مطور حلو') and ChCheck(msg) then
 function sudo_reply(extra, result, success)
 DevAbs:sadd(Matrix..'Abs:SecondSudo:',result.sender_user_id_)
-ReplyStatus(msg,result.sender_user_id_,"Reply","⌁︙تم رفعه في قائمة المطورين الثانويين")  
+ReplyStatus(msg,result.sender_user_id_,"Reply","⌁︙تم رفعه في قائمة المطورين الحلوين")  
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),sudo_reply)
@@ -4703,7 +4703,7 @@ local username = text:match('^اضف مطور ثانوي @(.*)') or text:match('
 function promreply(extra,result,success)
 if result.id_ then
 DevAbs:sadd(Matrix..'Abs:SecondSudo:',result.id_)
-ReplyStatus(msg,result.id_,"Reply","⌁︙تم رفعه في قائمة المطورين الثانويين")  
+ReplyStatus(msg,result.id_,"Reply","⌁︙تم رفعه في قائمة المطورين الحلوين")  
 else 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙*المعرف غير صحيح*', 1, 'md')
 end end 
@@ -4712,14 +4712,14 @@ end
 if text and (text:match('^اضف مطور ثانوي (%d+)') or text:match('^رفع مطور حلو (%d+)')) and ChCheck(msg) then
 local user = text:match('اضف مطور ثانوي (%d+)') or text:match('رفع مطور حلو (%d+)')
 DevAbs:sadd(Matrix..'Abs:SecondSudo:',user)
-ReplyStatus(msg,user,"Reply","⌁︙تم رفعه في قائمة المطورين الثانويين")  
+ReplyStatus(msg,user,"Reply","⌁︙تم رفعه في قائمة المطورين الحلوين")  
 end
 --     Source Matrix     --
 --     Rem SecondSudo     --
 if text ==('حذف مطور ثانوي') or text ==('تنزيل مطور ثانوي') and ChCheck(msg) then
 function prom_reply(extra, result, success)
 DevAbs:srem(Matrix..'Abs:SecondSudo:',result.sender_user_id_)
-ReplyStatus(msg,result.sender_user_id_,"Reply","⌁︙تم تنزيله من قائمة المطورين الثانويين")  
+ReplyStatus(msg,result.sender_user_id_,"Reply","⌁︙تم تنزيله من قائمة المطورين الحلوين")  
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
@@ -4729,7 +4729,7 @@ local username = text:match('^حذف مطور ثانوي @(.*)') or text:match('
 function promreply(extra,result,success)
 if result.id_ then
 DevAbs:srem(Matrix..'Abs:SecondSudo:',result.id_)
-ReplyStatus(msg,result.id_,"Reply","⌁︙تم تنزيله من قائمة المطورين الثانويين")  
+ReplyStatus(msg,result.id_,"Reply","⌁︙تم تنزيله من قائمة المطورين الحلوين")  
 else 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙*المعرف غير صحيح*', 1, 'md')
 end end 
@@ -4738,7 +4738,7 @@ end
 if text and (text:match('^حذف مطور ثانوي (%d+)') or text:match('^تنزيل مطور ثانوي (%d+)')) and ChCheck(msg) then
 local user = text:match('حذف مطور ثانوي (%d+)') or text:match('تنزيل مطور ثانوي (%d+)')
 DevAbs:srem(Matrix..'Abs:SecondSudo:',user)
-ReplyStatus(msg,user,"Reply","⌁︙تم تنزيله من قائمة المطورين الثانويين")  
+ReplyStatus(msg,user,"Reply","⌁︙تم تنزيله من قائمة المطورين الحلوين")  
 end end
 --     Source Matrix     --
 --       Set SudoBot      --
@@ -5928,7 +5928,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, "⌁︙*لاتستطيع حظر المطور �
 return false 
 end
 if DevAbs:sismember(Matrix..'Abs:SecondSudo:',result.sender_user_id_) and not Sudo(msg) then
-Dev_Abs(msg.chat_id_, msg.id_, 1, "⌁︙*لاتستطيع حظر المطور الثانوي*", 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, "⌁︙*لاتستطيع حظر المطور طارق*", 1, 'md')
 return false 
 end
 ChatKick(result.chat_id_, result.sender_user_id_)
@@ -5950,7 +5950,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, "⌁︙*لاتستطيع حظر المطور �
 return false 
 end
 if DevAbs:sismember(Matrix..'Abs:SecondSudo:',result.id_) and not Sudo(msg) then
-Dev_Abs(msg.chat_id_, msg.id_, 1, "⌁︙*لاتستطيع حظر المطور الثانوي*", 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, "⌁︙*لاتستطيع حظر المطور طارق*", 1, 'md')
 return false 
 end
 if result.id_ then
@@ -5973,7 +5973,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, "⌁︙*لاتستطيع حظر المطور �
 return false 
 end
 if DevAbs:sismember(Matrix..'Abs:SecondSudo:',user) and not Sudo(msg) then
-Dev_Abs(msg.chat_id_, msg.id_, 1, "⌁︙*لاتستطيع حظر المطور الثانوي*", 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, "⌁︙*لاتستطيع حظر المطور طارق*", 1, 'md')
 return false 
 end
 ChatKick(msg.chat_id_, user)
@@ -5993,7 +5993,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, "⌁︙*لاتستطيع كتم المطور �
 return false 
 end
 if DevAbs:sismember(Matrix..'Abs:SecondSudo:',result.sender_user_id_) and not Sudo(msg) then
-Dev_Abs(msg.chat_id_, msg.id_, 1, "⌁︙*لاتستطيع كتم المطور الثانوي*", 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, "⌁︙*لاتستطيع كتم المطور طارق*", 1, 'md')
 return false 
 end
 DevAbs:sadd(Matrix..'Abs:MuteAll:', result.sender_user_id_)
@@ -6014,7 +6014,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, "⌁︙*لاتستطيع كتم المطور �
 return false 
 end
 if DevAbs:sismember(Matrix..'Abs:SecondSudo:',result.id_) and not Sudo(msg) then
-Dev_Abs(msg.chat_id_, msg.id_, 1, "⌁︙*لاتستطيع كتم المطور الثانوي*", 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, "⌁︙*لاتستطيع كتم المطور طارق*", 1, 'md')
 return false 
 end
 if result.id_ then
@@ -6036,7 +6036,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, "⌁︙*لاتستطيع كتم المطور �
 return false 
 end
 if DevAbs:sismember(Matrix..'Abs:SecondSudo:',user) and not Sudo(msg) then
-Dev_Abs(msg.chat_id_, msg.id_, 1, "⌁︙*لاتستطيع كتم المطور الثانوي*", 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, "⌁︙*لاتستطيع كتم المطور طارق*", 1, 'md')
 return false 
 end
 DevAbs:sadd(Matrix..'Abs:MuteAll:', user)
@@ -6455,9 +6455,9 @@ end
 Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end
 --     Source Matrix     --
-if text == "المطورين الثانويين" and SecondSudo(msg) or text == "الثانويين" and SecondSudo(msg) then 
+if text == "المطورين الحلوين" and SecondSudo(msg) or text == "الحلوين" and SecondSudo(msg) then 
 local List = DevAbs:smembers(Matrix..'Abs:SecondSudo:')
-text = "⌁︙قائمة المطورين الثانويين ↫ ⤈ \n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n"
+text = "⌁︙قائمة المطورين الحلوين ↫ ⤈ \n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\n"
 for k,v in pairs(List) do
 local username = DevAbs:get(Matrix..'Save:UserName'..v)
 if username then
@@ -8305,9 +8305,9 @@ if text and text:match("^حذف (.*)$") or text and text:match("^مسح (.*)$") 
 local txts = {string.match(text, "^(حذف) (.*)$")}
 local txtss = {string.match(text, "^(مسح) (.*)$")}
 if Sudo(msg) then 
-if txts[2] == 'الثانويين' or txtss[2] == 'الثانويين' or txts[2] == 'المطورين الثانويين' or txtss[2] == 'المطورين الثانويين' then
+if txts[2] == 'الحلوين' or txtss[2] == 'الحلوين' or txts[2] == 'المطورين الحلوين' or txtss[2] == 'المطورين الحلوين' then
 DevAbs:del(Matrix..'Abs:SecondSudo:')
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌁︙تم حذف المطورين الثانويين")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌁︙تم حذف المطورين الحلوين")  
 end
 end
 if SecondSudo(msg) then 
@@ -8833,7 +8833,7 @@ data,res = https.request('https://apiabs.ml/Audios.php')
 if res == 200 then
 Audios = json:decode(data)
 if Audios.Info == true then
-local Text ='⌁︙مقدمه من المبرمج يونس'
+local Text ='⌁︙مقدمه من المطور طارق'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = '⌁ Matrix TeAM .',url="t.me/LL_WP"}},
@@ -10304,7 +10304,7 @@ local Text = [[
 ⌁︙رفع • تنزيل ↫ مطور
 ⌁︙المطورين • حذف المطورين
 ⌁︙رفع • تنزيل ↫ مطور ثانوي
-⌁︙الثانويين • حذف الثانويين
+⌁︙الحلوين • حذف الحلوين
 ⌁︙تعيين • حذف ↫ كليشة الايدي
 ⌁︙اذاعه للكل بالتوجيه ↫ بالرد
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
